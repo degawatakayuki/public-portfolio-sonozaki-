@@ -1,0 +1,118 @@
+@use "../foundation/mixins" as min;
+@use "../foundation/variables" as var;
+
+.p-footer {
+    width: 100%;
+    height: auto;
+    padding: 40px 0 43px;
+    background: var.$main-color;
+    color: var.$white;
+
+    @include min.breakpoint(tablet) {
+        padding: 85px 0 100px;
+    }
+
+    @include min.breakpoint(pc) {
+        padding: 86px 0 120px;
+    }
+
+    .footerBlock {
+        display: flex;
+        flex-direction: column-reverse;
+
+        @include min.breakpoint(tablet) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .NaviBlock {
+            margin-bottom: 69px;
+
+            @include min.breakpoint(tablet) {
+                display: flex;
+                width: 300px;
+                justify-content: space-between;
+                margin-bottom: unset;
+            }
+
+            ul {
+
+                @include min.breakpoint(tablet) {
+                    writing-mode: vertical-lr;
+                }
+
+                li {
+
+                    a {
+                        display: block;
+                        color: var.$white;
+                        font-size: 14px;
+                        height: 100%;
+                        width: 100%;
+                        padding: 11px 0;
+
+                        @include min.breakpoint(tablet) {
+                            font-size: 16px;
+                            padding: 0 8px;
+                        }
+                    } 
+                }
+            }
+
+            .naviContact {
+                margin-top: 64px;
+
+                @include min.breakpoint(tablet) {
+                    margin-top: unset;
+                }
+            }
+        }
+    }
+
+    .company {
+        
+        picture {
+            display: block;
+            width: 160px;
+            height: 36px;
+            margin-bottom: 22px;
+
+            @include min.breakpoint(tablet) {
+                width: 272px;
+                height: 60px;
+                margin-bottom: 38px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .companyInfo {
+            font-size: 14px;
+
+            @include min.breakpoint(tablet) {
+                font-size: 16px;
+            }
+
+            p {
+                margin-bottom: 16px;
+                color: var.$white;
+
+                @include min.breakpoint(tablet) {
+                    margin-bottom: 24px;
+                }
+
+                &:last-child {
+                    margin-bottom: unset;
+                }
+
+                a{
+                    color: var.$white;
+                }
+            }
+        }
+    }
+}

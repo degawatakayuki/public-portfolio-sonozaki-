@@ -1,0 +1,19 @@
+@use "../../foundation/mixins" as min;
+@use "../../foundation/variables" as var;
+
+.p-farstView {
+    background: linear-gradient(90deg, #4b6cb7, #182848);
+    height: 667px;
+
+    @include min.breakpoint(tablet) {
+        height: 768px;
+    }
+
+    &.menu-open {
+        background: #4b6cb7; 
+        z-index: 1000;
+        position: relative;
+        opacity: 1; 
+        height: 100%;
+    }
+}

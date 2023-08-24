@@ -1,0 +1,23 @@
+@use "../../foundation/mixins" as min;
+@use "../../foundation/variables" as var;
+
+.p-copyrightBlock {
+    background: var.$black;
+    color: var.$white;
+    font-size: 10px;
+    padding: 14px 0;
+
+    @include min.breakpoint(tablet) {
+        font-size: 12px;
+        padding: 23px 0;
+    }
+
+    small {
+        display: block;
+        font-size: 10px;
+
+        @include min.breakpoint(tablet) {
+            font-size: 12px;
+        }
+    }
+}

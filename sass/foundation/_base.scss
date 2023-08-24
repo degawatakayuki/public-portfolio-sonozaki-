@@ -1,0 +1,93 @@
+@use "mixins" as min;
+@use "variables" as var;
+
+body {
+    font-family: "NotoSansJP-Regular";
+    
+    * {
+        box-sizing: border-box;
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+
+    &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+.inner {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1480px;
+}
+
+.br-sp {
+    display: block;
+
+    @include min.breakpoint(tablet) {
+        display: none;
+    }
+}
+
+.br-tab {
+    display: block;
+
+    @include min.breakpoint(pc) {
+        display: none;
+    }
+}
+
+.br-pc {
+    display: none;
+
+    @include min.breakpoint(pc) {
+        display: block;
+    }
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px #18284880;
+    color: var.$white;
+    letter-spacing: 0.02em;
+    font-family: "Lato-Black";
+    line-height: 1;
+    font-weight: 900;
+
+    @include min.breakpoint(tablet) {
+        font-size: 68px;
+    }
+
+    @include min.breakpoint(wide) {
+        font-size: 96px;
+    }
+}
+
+h2 {
+    font-family: "Lato";
+    font-weight: bold;
+    line-height: 1;
+}
+
+a {
+    color: var.$black;
+}

@@ -1,0 +1,12 @@
+@use "../../foundation/mixins" as min;
+@use "../../foundation/variables" as var;
+
+.p-mainContents {
+
+    margin-top: 120px;
+    overflow: hidden;
+
+    @include min.breakpoint(tablet) {
+        margin-top: 160px;
+    }
+}

@@ -1,0 +1,96 @@
+@use "../../foundation/mixins" as min;
+@use "../../foundation/variables" as var;
+
+.p-about {
+    
+    margin: 0 auto;
+    margin-bottom: 120px;
+    width: 90%;
+    
+    @include min.breakpoint(tablet) {
+        width: 100%;
+        position: relative;
+        margin: unset;
+        margin-bottom: 160px;
+    }
+
+    picture {
+        display: block;
+        height: 248px;
+        width: 100%;
+
+        @include min.breakpoint(tablet) {
+            height: 656px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .aboutContents {
+
+        h2 {
+            margin-top: 45px;
+            margin-bottom: 30px;
+            line-height: 1;
+
+            @include min.breakpoint(tablet) {
+                margin-top: unset;
+                margin-bottom: 39px;
+            }
+        }
+
+        p{
+            width: 100%;
+
+            @include min.breakpoint(tablet) {
+                margin-bottom: 45px;
+            }
+        }
+
+        @include min.breakpoint(tablet) {
+            display: block;
+            background: var.$white;
+            padding: 32px;
+            position: absolute;
+            top:40px;
+            left: 5%;
+            width: 504px;
+            height: 576px;
+        }
+
+        @include min.breakpoint(pc) {
+            display: block;
+            background: var.$white;
+            padding: 48px;
+            position: absolute;
+            left: 15%;
+        }
+
+        picture {
+            display: none;
+            width: 100%;
+
+            @include min.breakpoint(tablet) {
+                display: block;
+                height: 120px;
+                margin-top: 32px;
+            }
+
+            @include min.breakpoint(pc) {
+                display: block;
+                max-width: 408px;
+                height: 120px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

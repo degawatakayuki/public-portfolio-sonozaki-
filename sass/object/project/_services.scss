@@ -1,0 +1,149 @@
+@use "../../foundation/mixins" as min;
+@use "../../foundation/variables" as var;
+
+.p-services {
+    display: block;
+    margin-bottom: 120px;
+    background: var.$bg-gray;
+
+    @include min.breakpoint(tablet) {
+        margin-bottom: 160px;
+    }
+
+    .servicesBlock {
+        height: 716px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+
+        @include min.breakpoint(tablet) {
+            height: 760px;
+        }
+
+        @include min.breakpoint(pc) {
+            height: 440px;
+            overflow: unset;
+            width: 100%;
+            max-width: 1480px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 205px;
+        }
+
+        .designBlock {
+            position: absolute;
+            display: block;
+            width: 250px;
+            height: 100%;
+            background: var.$white;
+            overflow: hidden;
+            transform: skewX(-25deg);
+            right: -25%;
+            bottom: 0;
+            z-index: 1;
+
+            @include min.breakpoint(tablet) {
+                right: 0;
+            }
+
+            @include min.breakpoint(pc) {
+                right: -5%;
+                width: 400px;
+                transform: skewX(-40deg);
+            }
+        }
+
+        .bgContainer {
+            display: block;
+            position: absolute;
+            background: var.$bg-gray;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+
+        picture {
+            display: block;
+            width: 100%;
+            height: 248px;
+            position: absolute;
+            z-index: 10;
+
+            @include min.breakpoint(tablet) {
+                height: 440px;
+            }
+
+            @include min.breakpoint(pc) {
+                top: 38px;
+                flex: 1 1 40%;
+                max-width: 520px;
+            }
+
+            @include min.breakpoint(wide) {
+                top: 38px;
+                flex: 1 1 40%;
+                max-width: 620px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            } 
+        }
+
+        .servicesContents {
+            display: block;
+            position: absolute;
+            height: 468px;
+            margin-top: 248px;
+            z-index: 10;
+            left: 5%;
+
+            @include min.breakpoint(tablet) {
+                top: 468px;
+                display: flex;
+                margin: 0 auto;
+            }
+
+            .tabLeft {
+
+                @include min.breakpoint(tablet) {
+                    flex: 0 0 60%;
+                }
+            }
+
+            .tabRight {
+
+                @include min.breakpoint(tablet) {
+                    flex: 1 1 40%;
+                    align-items: center;
+                }
+
+                p {
+                    margin-bottom: 20px;
+
+                    @include min.breakpoint(tablet) {
+                        margin: unset;
+                        margin-top: 30px;
+                    }
+                }
+
+                .contentBtn {
+
+                    @include min.breakpoint(tablet) {
+                        margin-top: 30px;
+                    }
+                }  
+            }
+
+            @include min.breakpoint(pc) {
+                left: 50%;
+                top: 38px;
+                margin-top: unset;
+                display: block;
+                flex: 0 0 60%;
+            }
+        }
+    } 
+}

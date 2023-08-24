@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+@use "foundation/_mixins";
+@use "foundation/_variables";
+@use "foundation/_reset.scss"; 
+@use "foundation/_base.scss";
+
+@use "layout/_header.scss";
+@use "layout/_footer.scss";
+
+@use "object/component/_hamburger";
+@use "object/component/_slide";
+@use "object/component/_contentBlock";
+@use "object/component/_loading";
+
+@use "object/project/_farstView";
+@use "object/project/_mainVisual";
+@use "object/project/_mainContents";
+@use "object/project/_services";
+@use "object/project/_about";
+@use "object/project/_works";
+@use "object/project/_recruit";
+@use "object/project/_contact";
+@use "object/project/_copyrightBlock";
+
+/* @use "object/utility/spacing"; */
+
